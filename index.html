@@ -3,6 +3,38 @@
 
 .signature-preview{min-height:38px;border-bottom:1px solid #555;font-family:"Brush Script MT","Segoe Script",cursive;font-style:italic;font-size:27px;padding:3px 7px;overflow:hidden}.signature-preview:not(.applied){color:transparent}.signature-field input[type=checkbox]{min-height:0}.signature-field .no-print{font-size:11px}
 @media print{@page{size:letter portrait;margin:0.22in}html,body{width:100%;margin:0;padding:0}.paper{zoom:0.79;break-inside:avoid;page-break-inside:avoid}.signature-section{margin-top:5px;padding-top:4px}.signature-grid{gap:10px}.signature-preview{min-height:25px;font-size:20px}.signature-field input{height:21px!important;font-size:10px}.footer{margin-top:4px}.paper-top{min-height:45px}.paper-top img{width:205px}.guidelines{font-size:6.6px}.guidelines th,.guidelines td{padding:2px 3px}.rating-line{min-height:24px;margin:2px 0}.followup{margin-top:5px}.overall{margin-top:5px}}
+
+/* One-sheet print layout: keep signature and signing date on the same letter page. */
+@media print {
+  @page { size: letter portrait; margin: 0.20in; }
+  html, body, main { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+  .paper { zoom: 0.69 !important; width: 100% !important; margin: 0 !important; padding: 0 !important; min-height: 0 !important; break-inside: avoid !important; }
+  .paper-top { min-height: 38px !important; }
+  .paper-top img { width: 190px !important; }
+  .date-row { margin: 0 0 3px !important; }
+  .rule { margin: 4px 0 !important; }
+  h1 { margin: 4px 0 !important; }
+  .form-grid { gap: 5px 12px !important; }
+  .field label { margin-bottom: 2px !important; }
+  .field input, .field textarea { min-height: 18px !important; padding: 2px 4px !important; }
+  .field textarea { min-height: 22px !important; }
+  .section-gap { margin-top: 4px !important; }
+  .instructions { margin: 5px 0 4px !important; }
+  .guidelines { font-size: 6.8px !important; }
+  .guidelines th, .guidelines td { padding: 2px 3px !important; line-height: 1.12 !important; }
+  .ratings-heading { margin: 6px 0 2px !important; }
+  .rating-line { min-height: 22px !important; margin: 2px 0 !important; padding: 2px 5px !important; }
+  .rating-line input, .rating-line textarea { min-height: 18px !important; padding: 2px 3px !important; }
+  .followup { margin-top: 4px !important; }
+  .followup .field { margin-bottom: 3px !important; }
+  .overall { margin-top: 4px !important; padding: 3px 0 !important; }
+  .signature-section { margin-top: 3px !important; padding-top: 3px !important; break-inside: avoid !important; }
+  .signature-heading { margin-bottom: 3px !important; }
+  .signature-preview { min-height: 25px !important; font-size: 20px !important; }
+  .signature-grid { gap: 10px !important; }
+  .signature-field input { height: 19px !important; }
+  .footer { margin-top: 3px !important; }
+}
 </style></head><body><main>
 <section class="toolbar-panel no-print"><h2>Vendor Templates</h2><div class="toolbar"><div class="field"><label for="vendorSelect">Select vendor template</label><select id="vendorSelect"></select></div><button id="newTemplate">+ New Vendor Template</button><button class="secondary" id="editTemplate">Edit Template</button><button class="secondary" id="deleteTemplate">Delete Template</button></div><div id="templateForm" class="hidden"><h2>Vendor Template Details</h2><div class="form-grid"><div class="field "><label for="tName">Firm Name *</label><input id="tName" type="text"></div><div class="field "><label for="tContact">Firm Contact</label><input id="tContact" type="text"></div><div class="field "><label for="tTitle">Contact Title</label><input id="tTitle" type="text"></div><div class="field "><label for="tEmail">Contact Email</label><input id="tEmail" type="text"></div><div class="field "><label for="tPhone">Contact Phone</label><input id="tPhone" type="text"></div><div class="field "><label for="tService">Services Provided</label><input id="tService" type="text"></div></div><div class="toolbar"><button id="saveTemplate">Save Vendor Template</button><button class="secondary" id="cancelTemplate">Cancel</button></div></div></section>
 <div class="paper"><div class="paper-top"><img src="ufacilities-logo.jpeg" alt="University of Utah Facilities logo"><div class="address">University of Utah - Facilities<br>Construction Management<br>1795 East South Campus Drive.<br>Salt Lake City, Utah 84112<br><small>revised 9.12.2024</small></div></div>
